@@ -247,18 +247,18 @@ kubectl label installation/kyma-installation action=install
 
 shout "Success cluster created"
 
-shout "End To End Test"
-date
-cd "${KYMA_SCRIPTS_DIR}"
-set +e
-./e2e-testing.sh
-TEST_STATUS=$?
-if [ ${TEST_STATUS} -ne 0 ]
-then
-    shout "End to End test Failed"
-    exit 1
-else
-    shout "Cleanup"
-    date
-    cleanup
-fi
+# shout "End To End Test"
+# date
+# cd "${KYMA_SCRIPTS_DIR}"
+# set +e
+# ./e2e-testing.sh
+# TEST_STATUS=$?
+# if [ ${TEST_STATUS} -ne 0 ]
+# then
+#     shout "End to End test Failed"
+#     exit 1
+# else
+#     shout "Cleanup"
+#     date
+#     cleanup
+# fi
